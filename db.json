@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "title": "Tree Name",
+      "text": "Each sapling (tree) has a unique name, the name can be changed after purchasing a token. C02 tokens will be burned to change the name"
+    },
+    {
+      
+      "title": "Image",
+      "text": "We will update the image every 6 months until it takes its final shape. Each image will be engraved with the exact coordinates of your tree"
+    },
+    {
+      
+      "title": "Tree age",
+      "text": "The age of the tree will be counted from the moment of planting the seedlings in the ground and denoted by years and days"
+    },
+    {
+      
+      "title": "SEQ tokens",
+      "text": "Each tree (NFT token) generates a certain number of ERC20 tokens per day. The number of tokens generated = the amount of C02 absorbed by the tree"
+    }
+
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

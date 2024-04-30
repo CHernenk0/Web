@@ -1,0 +1,193 @@
+//====================================================================================================
+.header {
+    background: linear-gradient(180deg, #000 45.56%, rgba(0, 0, 0, 0.80) 56.45%, rgba(0, 0, 0, 0.60) 67.34%, rgba(0, 0, 0, 0.40) 78.23%, rgba(0, 0, 0, 0.20) 89.11%, rgba(0, 0, 0, 0.00) 100%) !important;
+    position: absolute;
+    width: 100%;
+   height: 200px;
+    &._scroll{
+        .header__block{
+            background: linear-gradient(180deg, #000 45.56%, rgba(0, 0, 0, 0.80) 56.45%, rgba(0, 0, 0, 0.60) 67.34%, rgba(0, 0, 0, 0.40) 78.23%, rgba(0, 0, 0, 0.20) 89.11%, rgba(0, 0, 0, 0.00) 100%) !important;
+
+            @media (any-hover: hover){
+                &:hover{
+                    background-color: rgba(48, 48, 48, 0.98);
+                }
+            }
+        }
+        .header__body{
+            min-height: 50px;
+            @media (min-width:$tablet){
+                 min-height: 70px; 
+            }
+        }
+    }
+    
+  
+
+    &__block {
+        background: linear-gradient(180deg, #000 45.56%, rgba(0, 0, 0, 0.80) 56.45%, rgba(0, 0, 0, 0.60) 67.34%, rgba(0, 0, 0, 0.40) 78.23%, rgba(0, 0, 0, 0.20) 89.11%, rgba(0, 0, 0, 0.00) 100%) !important;
+
+        width: 100%;
+        transition:background-color 0.3s ease 0s;
+        position: fixed;
+        // // width: 100%;
+       
+        
+        z-index: 50;
+
+        display: flex;
+        gap: 296px;
+        padding: 40px 0 69px 0;
+        justify-content: space-between;
+        align-items: center;
+      @media (max-width:$pc){
+         gap: 100px; 
+      }
+      @media (max-width:$tablet){
+        gap: 30px;
+        padding: 20px 0 39px 0;
+        
+      }
+      @media (max-width:$mobile){
+        padding: 20px 0 20px 0;
+      }
+    }
+    &__box{
+        max-width: 1214px;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        @media (max-width:$tablet){
+            flex: 1 1 auto;
+        }
+    }
+    &__logo{
+        
+    }
+
+    &__menu {
+    }
+
+    &__social {
+    }
+}
+.menu {
+
+    &__icon {
+    }
+
+    &__body {
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: #fff;
+        @media (max-width:$tablet){
+            flex-direction: column;
+            font-size: 20px;
+        }
+        
+    }
+
+    &__item {
+    }
+
+    &__link {
+        transition: all 0.3s;
+        @media (any-hover: hover){
+            &:hover{
+                color: #C2E978;
+            }
+        }
+    }
+}
+.icon-menu {
+}
+.social-header {
+    display: none;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        
+    }
+}
+
+//====================================================================================================
+
+//Burger
+.icon-menu {
+    margin-right: 15px;
+    transition: all 0.3s ease 0s;
+        @media (max-width:$tablet) {
+            display: block;
+            position: relative;
+            flex: 0 0 30px;
+            height: 18px;
+            
+            cursor: pointer;
+            z-index: 20;
+            span{ /**/ transition: all 0.4s ease 0s;top: 8px; right: 0;position: absolute; width: 100%; height: 2px;background-color: #C2E978;
+                &:first-child{top: 0px;}
+                
+                &:last-child{top: auto; bottom: 0px;}
+            }
+            &._active{
+               
+                span{transform: scale(0); /**/transition: all 0.4s ease 0s;
+                    &:first-child{transform:rotate(-45deg); top:8px;}
+                    &:last-child{transform:rotate(45deg); bottom:8px;}
+                }
+            }
+        }
+}
+
+
+.menu {
+    &__body {
+        @media (max-width:  $tablet){
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: -100%;//
+              overflow: auto;
+              background-color: rgba(25, 29, 46, 1);
+              z-index: 20;
+              padding: toRem(130)  toRem(30) toRem(80) toRem(30);
+              @media (max-width:$mobile){
+                padding: toRem(100)  toRem(20) toRem(40) toRem(20);
+              }
+              &::before{
+                content:'';
+                min-height: toRem(78);
+                position: fixed;
+                width: 100%;
+                z-index: 8;
+                top: 0;
+                left: 0;
+                background-color:rgba(25, 29, 46, 1);
+                transform: translate(0px,-100%);
+              }
+              &._active{
+                left: 0;
+                &::before{
+                  
+                    transform: translate(0px,0px);
+                }
+            }
+        }
+
+    }
+}
